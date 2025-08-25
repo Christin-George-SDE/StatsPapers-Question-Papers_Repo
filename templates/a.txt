@@ -1,0 +1,70 @@
+Comfortable looking for data through sources such as Thomson Reuters, Gartner, IDC, Factiva, etc.
+Priject Idea
+
+do you tube video and audio quality matters in no of viwers and  watch time
+if yes what are the excat things matters, colur grading audio speed, frequency ect.
+
+
+
+https://github.com/ILKAY-BRAHIM/DeepVisionStream/tree/main - video automation
+
+
+3) measuring coustomer satisfaction using facial recognisazion using the cctv footage, 
+
+Job searching
+
+honeypot.io
+
+
+create an html form
+it shod have a drop down menu  which allow user to select 1- 4 semester, and year in number (eg:2014) of exam and month(dropdown) shown in the question pepper. 
+if semester 1 is selected then allow user to select from this list the pepper name
+1. Probability theory
+2. Distribution Theory
+3. Analytical tools for 
+Statistics
+4. Sampling Theory
+5. Database Management System
+
+if semester 2
+1. Estimation Theory
+2. Stochastic Processes
+3. Multivariate 
+Distributions
+4. Data Science I- using R/Python
+5.  Object Oriented Programming Using Java
+
+if semester 3
+1. Testing of Hypotheses
+2. Design and Analysis of Experiments
+3. Multivariate Analysis
+4. Time series analysis
+5. Web Development and PHP 
+
+if semester 4
+
+1.Econometrics methods
+2.Programming using Python
+3.Reliability Analysis
+4. Industrial Statistics
+5.Practical_2
+
+
+
+
+mongodb+srv://georgechristin29:<db_password>@cluster0.o7t4bo6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+
+from pymongo.mongo_client import MongoClient
+
+uri = "mongodb+srv://georgechristin29:<db_password>@cluster0.o7t4bo6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+
+# Create a new client and connect to the server
+client = MongoClient(uri)
+
+# Send a ping to confirm a successful connection
+try:
+    client.admin.command('ping')
+    print("Pinged your deployment. You successfully connected to MongoDB!")
+except Exception as e:
+    print(e)
