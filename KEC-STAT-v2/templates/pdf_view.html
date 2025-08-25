@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PDF Library</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ebebeb;
+      padding: 30px;
+    }
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 20px;
+    }
+    .pdf-icon {
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+    .pdf-icon:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .pdf-icon a {
+      text-decoration: none;
+      color: #007BFF;
+      font-size: 14px;
+      word-wrap: break-word;
+      display: block;
+    }
+    .pdf-icon img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>📚 Available Question Papers</h2>
+  <div class="grid">
+    {% for pdf in pdf_files %}
+      <div class="pdf-icon">
+        <a href="{{ url_for('serve_pdf', filename=pdf) }}" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF icon">
+          {{ pdf }}
+        </a>
+      </div>
+    {% else %}
+      <p>No PDF files found.</p>
+    {% endfor %}
+  </div>
+</body>
+</html>
